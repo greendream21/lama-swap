@@ -1,6 +1,6 @@
 {
   "name": "@uniswap/v2-core",
-  "description": "🎛 Core contracts for the UniswapV2 protocol",
+  "description": "🎛 Core contracts for the LamaswapV2 protocol",
   "version": "1.0.1",
   "homepage": "https://uniswap.org",
   "repository": {
@@ -44,5 +44,9 @@
     "test": "mocha",
     "prepublishOnly": "yarn test"
   },
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "volta": {
+    "node": "11.15.0",
+    "yarn": "1.22.10"
+  }
 }
