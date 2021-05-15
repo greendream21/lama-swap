@@ -1,18 +1,18 @@
 {
-  "name": "@uniswap/v2-core",
+  "name": "@lamamoon/swap-core",
   "description": "🎛 Core contracts for the LamaswapV2 protocol",
-  "version": "1.0.1",
-  "homepage": "https://uniswap.org",
+  "version": "1.0.3",
+  "homepage": "https://lamamoon.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Uniswap/uniswap-v2-core"
+    "url": "https://github.com/LamaMoon/lamamoon-swap-core"
   },
   "keywords": [
-    "uniswap",
+    "lamaswap",
     "ethereum",
     "v2",
     "core",
-    "uniswap-v2"
+    "lamamoon"
   ],
   "files": [
     "contracts",
@@ -30,6 +30,7 @@
     "mocha": "^6.2.2",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
+    "sol-merger": "^3.1.0",
     "solc": "0.5.16",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
@@ -42,11 +43,16 @@
     "compile": "waffle .waffle.json",
     "pretest": "yarn compile",
     "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "yarn test",
+    "build-contracts": "sol-merger \"./contracts/*.sol\" ./build"
   },
   "license": "GPL-3.0-or-later",
   "volta": {
     "node": "11.15.0",
     "yarn": "1.22.10"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.4.0",
+    "ether.js": "^1.0.0"
   }
 }
